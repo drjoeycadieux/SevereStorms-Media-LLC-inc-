@@ -9,6 +9,9 @@ var map = new mapboxgl.Map({
     zoom: 3.5
 });
 
+// disable map zoom when using scroll
+map.scrollZoom.disable();
+
 // Storm Prediction Center -> Spcd Day 1 //
 
 map.on('load', function () {
