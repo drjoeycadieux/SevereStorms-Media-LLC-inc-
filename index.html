@@ -2,7 +2,6 @@
 <html>
 
 <head>
-	<link rel="stylesheet" href="https://unpkg.com/@coreui/coreui/dist/css/coreui.min.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/darkly/bootstrap.min.css" integrity="sha384-nNK9n28pDUDDgIiIqZ/MiyO3F4/9vsMtReZK39klb/MtkZI3/LtjSjlmyVPS3KdN"
 	 crossorigin="anonymous">
 	<meta charset="utf-8">
@@ -37,28 +36,6 @@
     </form>
   </div>
 </nav>
-
-
- <script>
-    $(document).ready(function () {
-    // Check if user saw the modal
-    var key = 'hadModal',
-        hadModal = localStorage.getItem(key);
-
-    // Show the modal only if new user
-     //  if (!hadModal) 
-
-       {
-      $('#myModal').modal('show');
-  }
-
-    // If modal is displayed, store that in localStorage
-    $('#myModal').on('shown.bs.modal', function () {
-    localStorage.setItem(key, true);
-    })
-});
-
-</script>
    
    <div class="hero-image">
   <div class="hero-text">
@@ -72,50 +49,18 @@
   </div>
 </div>
 
-
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle"><b>Tracker Temporarily Unavailable</b></h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-
-        <h5>Due to unscheduled maintenance, COVID19Tracker.ca is temporarily unavailable.</h5>
-<br>
-
-<p>The server used for our systems is currently undergoing emergency maintenance. This impacts all services powered by our API. We are working to restore services as soon as possible, and apologize for any inconvenience this downtime may cause.</p>
-
-<p>Please wait, and load the page again later. Data will appear again once services are restored.</p>
-
-<p>Up-to-date information regarding the situation will be available via <a href="https://twitter.com/covid_canada">Twitter</a>.</p>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
+      
+       <div class="row">
+                    <div class="col-xl-6" id="displayMap">
+                        <div class="card mb-4">
+                            <div class="card-header"><i class="fas fa-chart-bar mr-1"></i>By Map</div>
+                            <div class="card-body" style="padding:0px;">
+                                <div id="map"></div>
+                            </div>
+                        </div>
+                    </div>
 
 
-<div class="d-flex flex-column">
-  <footer class="footer">
-    <div>
-      <a href="https://coreui.io">Severe Storms Media</a>
-      <span>&copy; 2021 severestormsmedia.com</span>
-    </div>
-    <div class="ml-auto">
-      <span>Powered by</span>
-      <a href="https://severestormsmedia.com">Developers Community</a>
-    </div>
-  </footer>
-</div>
-
-     <script src="https://unpkg.com/@popperjs/core@2"></script>
-     <script src="https://unpkg.com/@coreui/coreui/dist/js/coreui.min.js"></script>
- 
 	<script src="script.js">
 	</script>
 </body>
